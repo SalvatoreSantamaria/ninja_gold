@@ -1,0 +1,102 @@
+<html>
+    <head>
+       <title>Ninja Gold</title>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+       <style>
+            body {
+             background-color: 	 #f2f2f2;
+           }
+           .marg {   
+               margin: 20px;  
+           }
+           .lostmoney {
+               color: red;
+           }
+           .gainmoney {
+               color: green;
+           }
+           .scrolloverflow {
+               height: 400px;
+
+               overflow: auto;
+           }
+         </style>
+    </head>
+    <body class = 'marg'>
+    <h1>Ninja Gold</h1>
+    <p>Ninja Gold Game</p>
+    <p>Gold Total: {{ x }}</p>
+    
+    <form action='/process_money' method='post'>
+    <input name="name" class='btn btn-primary' type='submit' value='farm'/>
+    </form>
+
+    <form action='/process_money' method='post'>
+    <input name="cavename" class='btn btn-primary' type='submit' value='cave'/>
+    </form>
+
+    <form action='/process_money' method='post'>
+    <input name="housename" class='btn btn-primary' type='submit' value='house'/>
+    </form>
+
+    <form action='/process_money' method='post'>
+    <input name="casinoname" class='btn btn-primary' type='submit' value='casino'/>
+    </form>
+
+    <form action='/reset' method='post'>
+    <input class='btn btn-primary' type='submit' value='Reset'/>
+    </form>
+
+    <div class= 'scrolloverflow'>
+    <p>{{ m|safe }}</p>
+    </div>
+
+
+
+
+
+<!-- Old Code for Reference -->
+
+
+    <!-- Form for guessing the number -->
+    <!-- <form action='/button' method='post'>
+    <input type="number" name="user_guess" min="1" max="100">
+    <input class='btn btn-primary' type='submit' value='Guess'/>
+    </form> -->
+
+
+    <!-- A new form and reset button appears when the number is guess correctly -->
+    <!-- {% if guessed == True: %}
+    <form action='/reset' method='post'>
+    <input class='btn btn-primary' type='submit' value='Reset'/>
+    </form>
+    {% endif %} -->
+
+
+
+    <!-- The users guess outputs here -->
+    <!-- <p>{{ u_guess }}</p>  -->
+
+
+
+
+
+
+
+      <!-- <h1>Count is {{session['count']}} </h1>
+      <form action='/button' method='post'>
+      <input class='btn btn-primary' type='submit' value='Count + 2'/>
+      </form>
+      <form action='/reset' method='post'>
+
+      <input class='btn btn-primary' type='submit' value='Reset'/>
+      </form> -->
+
+
+
+     <p>This assignment can be found at <a href=http://learn.codingdojo.com/m/83/5461/35183">http://learn.codingdojo.com/m/83/5461/35183.</a></p>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
